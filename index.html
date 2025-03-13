@@ -16,7 +16,7 @@
       <div class="buttons">
         <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
         <button
-          class="btn"
+          class="btn btn-no"
           id="noButton"
           onmouseover="moveButton()"
           onclick="moveButton()">
@@ -28,23 +28,19 @@
           }
 
           function moveButton() {
-            // var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-            // var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-            // document.getElementById('noButton').style.left = `${x}px`;
-            // document.getElementById('noButton').style.top = `${y}px`;
-            var button = document.getElementById("noButton");
-            var maxX = window.innerWidth - button.offsetWidth - 85;
-            var maxY = window.innerHeight - button.offsetHeight - 48;
-            var x = Math.random() * maxX;
-            var y = Math.random() * maxY;
-            button.style.transform = `translate(${x}px, ${y}px)`;
+            var x =
+              Math.random() *
+                (window.innerWidth -
+                  document.getElementById("noButton").offsetWidth) -
+              85;
+            var y =
+              Math.random() *
+                (window.innerHeight -
+                  document.getElementById("noButton").offsetHeight) -
+              48;
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
           }
-          document
-            .getElementById("noButton")
-            .addEventListener("mouseover", moveButton);
-          document
-            .getElementById("noButton")
-            .addEventListener("touchstart", moveButton);
         </script>
       </div>
     </div>
